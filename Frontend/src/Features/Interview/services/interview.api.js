@@ -3,7 +3,7 @@ import axios from "axios";
 const API_BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api/interview`;
 
 const interviewApi = axios.create({
-    baseURL: API_BASE_URL,
+    baseURL: `${import.meta.env.VITE_API_BASE_URL}/api/interview`,
     withCredentials: true, // Include credentials for cross-origin requests
 });
 
