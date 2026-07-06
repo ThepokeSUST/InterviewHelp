@@ -39,7 +39,7 @@ const interviewRoute= require("./routes/interview.route")
 app.set('trust proxy', 1);
 const FRONTEND_URL = process.env.FRONTEND_URL; 
 app.use(cors({
-    origin: 'https://interviewhelp-1-52zj.onrender.com',
+    origin: FRONTEND_URL || 'https://interviewhelp-1-52zj.onrender.com',
     credentials: true
 }));
 app.use(express.json());
