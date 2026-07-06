@@ -20,7 +20,7 @@ export const useAuth = () => {
                   // console.log("'''''''''''")
                   // console.log(data.user);
                   setUser(data.user);
-                  console.log(data, "   from login in useAuth")
+                  // console.log(data, "   from login in useAuth")
             }
             catch (err) {
                   console.log(err.message);
@@ -77,6 +77,7 @@ export const useAuth = () => {
             catch(err){
             //   console.log("Error in getMe function");
             console.log(err);
+            // console.log("okoko");
               setUser(null);
             }
             finally{

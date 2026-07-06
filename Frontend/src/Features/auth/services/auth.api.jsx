@@ -15,7 +15,7 @@ export async function register({username,email,password}){
             email,
             password
          })
-
+         console.log("from register api")
          return response.data;
      }
      catch(err){
@@ -33,10 +33,13 @@ export async function login({email,password}){
         
      try{
 
+        // console.log("this is login api")
         const response=await api.post("/api/auth/login",{
             email,
             password
         });
+        // console.log("this is login api2")
+
         // console.log(response)
     //   console.log("_______",response.data);
       return response.data;

@@ -135,6 +135,7 @@ async function logoutUserController(req, res) {
  */
 
 async function getMeController(req,res) {
+    // console.log("auth cpntroller")
        
      const user=await userModel.findById(req.user._id);
     // if(!user){
@@ -142,6 +143,7 @@ async function getMeController(req,res) {
     //         message:"user not found"
     //     })
     // }
+    // console.log(user,"auth cpntroller")
     const obj= {
         id:user._id,
         username:user.username,

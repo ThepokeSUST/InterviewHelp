@@ -16,9 +16,10 @@ const Login = () =>{
 
    async function handleSubmit(e){
       e.preventDefault();
-      console.log(email, password);
+      // console.log(email, password);
       try{
           await handleLogin({email,password});
+          // console.log("login successful");
           navigate('/');
       }
       catch(err){

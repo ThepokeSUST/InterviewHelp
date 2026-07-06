@@ -10,7 +10,8 @@ async function authUser(req,res,next){
     // console.log("this is auth middleware");
 
     if(!token){
-      console.log("there is no token");
+    //   console.log("there is no token from auth middleware");
+    console.log("there is no token from auth middleware");
     return res.status(401).json({
         message:"token not provided"
     })
