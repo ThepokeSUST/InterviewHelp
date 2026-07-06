@@ -1,0 +1,411 @@
+.interview-page {
+  min-height: 100vh;
+  padding: 8px;
+  background:
+    radial-gradient(circle at top, rgba(92, 126, 255, 0.12), transparent 30%),
+    linear-gradient(180deg, #121416 0%, #17191c 100%);
+  color: #d9e1f2;
+}
+
+.interview-shell {
+  min-height: calc(100vh - 16px);
+  display: grid;
+  grid-template-columns: minmax(220px, 260px) minmax(420px, 1fr) minmax(220px, 260px);
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(114, 126, 155, 0.26);
+  border-radius: 10px;
+  background: rgba(18, 21, 26, 0.92);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 0;
+}
+
+.sidebar__top {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar__top .eyebrow,
+.report-header .eyebrow {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #aab7cf;
+}
+
+.sidebar__top h2,
+.report-header h1 {
+  margin: 0;
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.1;
+  color: #eef3ff;
+}
+
+.nav-cards {
+  display: grid;
+  gap: 10px;
+}
+
+.nav-card {
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(15, 18, 22, 0.76);
+  color: #eef3ff;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-card:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-card--active {
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.30), rgba(139, 92, 246, 0.22));
+  border-color: rgba(124, 58, 237, 0.65);
+  color: #eef3ff;
+}
+
+.nav-card--active span,
+.nav-card--active small {
+  color: #eef3ff;
+}
+
+.nav-card small {
+  color: #95a4bf;
+  font-size: 12px;
+}
+
+.question-label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7ee5a4;
+}
+
+.question-meta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.18);
+  color: #baf7c4;
+  font-size: 11px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.summary-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #7ee5a4;
+}
+
+.score-badge {
+  min-width: 84px;
+  padding: 16px;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  color: #eef3ff;
+  background: linear-gradient(180deg, #4fd89b 0%, #2e7d32 100%);
+}
+
+.roadmap-card__header h3,
+.roadmap-item__title {
+  color: #baf7c4;
+}
+
+.roadmap-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.roadmap-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.roadmap-item__title {
+  font-size: 14px;
+  color: #eef3ff;
+}
+
+.sidebar__note {
+  padding: 18px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(24, 31, 45, 0.82), rgba(18, 23, 34, 0.92));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sidebar__note--secondary {
+  margin-top: auto;
+}
+
+.note-title {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #dce6ff;
+}
+
+.note-title + p {
+  margin: 0;
+  font-size: 13px;
+  color: #95a4bf;
+  line-height: 1.6;
+}
+
+.interview-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+}
+
+.report-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 22px;
+  border-radius: 16px;
+  background: rgba(15, 18, 22, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.score-badge {
+  min-width: 84px;
+  padding: 16px;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  color: #eef3ff;
+  background: linear-gradient(180deg, #4fd8ff 0%, #6d7bff 100%);
+}
+
+.summary-card,
+.question-card {
+  border-radius: 16px;
+  padding: 20px;
+  background: rgba(15, 18, 22, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+.summary-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.summary-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #aab7cf;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.summary-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #eef3ff;
+}
+
+.summary-text,
+.question-answer,
+.question-intention {
+  margin: 0;
+  color: #c4d1e8;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.question-group {
+  display: grid;
+  gap: 12px;
+}
+
+.question-group__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question-group__header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #eef3ff;
+}
+
+.question-card {
+  display: grid;
+  gap: 12px;
+}
+
+.question-label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8ca6ff;
+}
+
+.question-card h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #eef3ff;
+  line-height: 1.4;
+}
+
+.question-meta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(94, 132, 255, 0.14);
+  color: #cce3ff;
+  font-size: 11px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.question-intention {
+  font-style: italic;
+}
+
+.gaps-list {
+  display: grid;
+  gap: 12px;
+}
+
+.gap-pill {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(15, 18, 22, 0.86);
+}
+
+.gap-pill span:first-child {
+  font-size: 14px;
+  color: #eef3ff;
+}
+
+.gap-severity {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.gap-severity--medium {
+  background: rgba(255, 193, 7, 0.12);
+  color: #ffe082;
+}
+
+.roadmap-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.roadmap-card {
+  padding: 22px;
+}
+
+.roadmap-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.roadmap-tasks {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 10px;
+  color: #c4d1e8;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.roadmap-tasks li {
+  list-style: disc;
+}
+
+@media (max-width: 1080px) {
+  .interview-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .interview-content {
+    order: 2;
+  }
+
+  .sidebar--left,
+  .sidebar--right {
+    order: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .interview-page {
+    padding: 0;
+  }
+
+  .interview-shell {
+    padding: 14px;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  .report-header,
+  .summary-card,
+  .question-card,
+  .sidebar__note,
+  .gap-pill,
+  .nav-card {
+    padding: 16px;
+  }
+
+  .report-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
