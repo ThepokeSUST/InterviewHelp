@@ -13,13 +13,11 @@ app.use(express.urlencoded({extended:true}));
 app.set('trust proxy', 1);
 const FRONTEND_URL = process.env.FRONTEND_URL; 
 app.use(cors({
-    origin: FRONTEND_URL,
+    origin: 'https://interviewhelp-1-52zj.onrender.com',
     credentials: true
 }));
 
-// app.get('/', (req, res) => {
-//   res.send('Hello, World!');
-// });
+
 
 app.use('/api/auth',authRoute);
 app.use('/api/interview',interviewRoute);
